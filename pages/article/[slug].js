@@ -1,0 +1,103 @@
+import Layout from '../../components/Layout';
+import Head from 'next/head';
+import Link from 'next/link';
+import { getAllArticles, getArticleBySlug } from '../../lib/github';
+import { remark } from 'remark';
+import html from 'remark-html';
+import { useState, useEffect } from 'react';
+import Icon from '../../components/Icon';
+
+export default function ArticlePage({ article, contentHtml }) {
+  const [shareOpen, setShareOpen] = useState(false);
+
+  useEffect(() => {
+    const handleEscape = (e) => { if (e.key === 'Escape') setShareOpen(false); };
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, []);
+
+  if (!article) {
+    return (
+      <Layout>
+        <div style={{ textAlign: 'center', padding: '4rem 1rem' }}>
+          <h1 style={{ fontSize: '3rem', color: '#dc2626' }}>404</h1>
+          <p style={{ fontSize: '1.2rem' }}>⚠️ المقال غير موجود أو تم حذفه.</p>
+          <Link href="/blog" className="btn-gold" style={{ display: 'inline-block', marginTop: '1.5rem' }}>العودة إلى المكتبة</Link>
+        </div>
+      </Layout>
+    );
+  }
+
+  const articleUrl = `https://ostazlaw.vercel.app/article/${encodeURIComponent(article.slug)}`;
+
+  return (
+    <Layout>
+      <Head>
+        <title>{article.title} | الأستاذ محمود عبد الحميد</title>
+        <meta name="description" content={article.description || ''} />
+        <meta property="og:title" content={article.title} />
+        <meta property="og:description" content={article.description || ''} />
+        {article.image && <meta property="og:image" content={article.image} />}
+        <meta name="twitter:card" content="summary_large_image" />
+        {article.image && <meta name="twitter:image" content={article.image} />}
+        <link rel="canonical" href={articleUrl} />
+      </Head>
+
+      <div className="article-wrapper">
+        <div className="article-header-info">
+          <div className="meta-row">
+            <span><Icon name="user" style={{ marginLeft: '6px', color: 'var(--matte-gold)' }} /> <span style={{ fontWeight: 700 }}>{article.author || 'محمود عبد الحميد'}</span></span>
+            <span className="divider"></span>
+            <span><Icon name="calendar-alt" style={{ marginLeft: '6px', color: 'var(--matte-gold)' }} /> {article.date ? new Date(article.date).toLocaleDateString('ar-EG') : ''}</span>
+          </div>
+        </div>
+        <h1 className="article-title">{article.title}</h1>
+        {article.image && (
+          <div className="article-image">
+            <img src={article.image} alt={article.title} loading="lazy" />
+          </div>
+        )}
+        <div className="article-body" dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        
+        <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+          <Link href="/blog" className="btn-outline-gold">العودة للمكتبة</Link>
+        </div>
+      </div>
+
+      <style jsx>{`
+        .article-wrapper { max-width: 820px; margin: 0 auto; padding: 120px 1.5rem 4rem; }
+        .article-title { font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 2rem; color: var(--deep-navy); }
+        .article-body { line-height: 2.2; font-size: 1.15rem; color: var(--charcoal); }
+        .meta-row { display: flex; justify-content: center; gap: 1.5rem; color: #666; margin-bottom: 1rem; }
+        .divider { width: 1px; height: 20px; background: #ddd; }
+        .btn-outline-gold { border: 2px solid var(--matte-gold); color: var(--matte-gold); padding: 0.6rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
+      `}</style>
+    </Layout>
+  );
+}
+
+export async function getStaticPaths() {
+  try {
+    const articles = await getAllArticles();
+    const paths = articles.map((a) => ({ params: { slug: a.slug } }));
+    return { paths, fallback: 'blocking' };
+  } catch (error) {
+    console.error('Error in getStaticPaths:', error);
+    return { paths: [], fallback: 'blocking' };
+  }
+}
+
+export async function getStaticProps({ params }) {
+  try {
+    const decodedSlug = decodeURIComponent(params.slug);
+    let article = await getArticleBySlug(decodedSlug);
+    if (!article) { article = await getArticleBySlug(params.slug); }
+    if (!article) { return { notFound: true }; }
+    const processed = await remark().use(html).process(article.content || '');
+    const contentHtml = processed.toString();
+    return { props: { article, contentHtml }, revalidate: 60 };
+  } catch (error) {
+    console.error('Error in getStaticProps:', error);
+    return { notFound: true };
+  }
+}
