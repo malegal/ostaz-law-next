@@ -106,23 +106,52 @@ export default function NewsArchive({ newsItems }) {
             ) : (
               newsItems.map((item) => {
                 const badgeColors = {
-                  'إنجاز قضائي': 'background:var(--matte-gold); color:#000;',
-                  'فعالية': 'background:var(--deep-navy); color:#fff;',
-                  'تطوير': 'background:var(--very-dark-navy); color:#fff;'
+                  'إنجاز قضائي': {
+                    background: 'var(--matte-gold)',
+                    color: '#000',
+                  },
+                  'فعالية': {
+                    background: 'var(--deep-navy)',
+                    color: '#fff',
+                  },
+                  'تطوير': {
+                    background: 'var(--very-dark-navy)',
+                    color: '#fff',
+                  },
                 };
-                const badgeStyle = badgeColors[item.category] || 'background:var(--matte-gold); color:#000;';
+
+                const badgeStyle =
+                  badgeColors[item.category] || {
+                    background: 'var(--matte-gold)',
+                    color: '#000',
+                  };
+
                 return (
                   <div key={item.slug} className="sector-link">
                     <Link href={`/news/${item.slug}`} style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
                       <div className="experience-card reveal" style={{ textAlign: 'right', position: 'relative' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
-                          <span style={{ ...badgeStyle, padding: '0.1rem 0.8rem', borderRadius: '20px', fontSize: '0.6rem', fontWeight: '800' }}>{item.category || 'خبر'}</span>
-                          <span style={{ fontSize: '0.7rem', color: 'var(--text-secondary)' }}>{item.date ? new Date(item.date).toLocaleDateString('ar-EG') : ''}</span>
+                          <span
+                            style={{
+                              ...badgeStyle,
+                              padding: '0.1rem 0.8rem',
+                              borderRadius: '20px',
+                              fontSize: '0.6rem',
+                              fontWeight: '800',
+                            }}
+                          >
+                            {item.category || 'خبر'}
+                          </span>
+                          <span style={{ fontSize: '0.7rem', color: 'var(--text-secondary)' }}>
+                            {item.date ? new Date(item.date).toLocaleDateString('ar-EG') : ''}
+                          </span>
                         </div>
                         <span className="icon"><Icon name="newspaper" style={{ fontSize: '1.5rem' }} /></span>
                         <h4>{item.title}</h4>
                         <p>{item.description || ''}</p>
-                        <span style={{ color: 'var(--matte-gold)', fontWeight: '700', fontSize: '0.8rem', marginTop: '0.5rem', display: 'inline-block' }}>اقرأ التفاصيل ←</span>
+                        <span style={{ color: 'var(--matte-gold)', fontWeight: '700', fontSize: '0.8rem', marginTop: '0.5rem', display: 'inline-block' }}>
+                          اقرأ التفاصيل ←
+                        </span>
                       </div>
                     </Link>
                   </div>
@@ -165,6 +194,9 @@ export default function NewsArchive({ newsItems }) {
 
 export async function getStaticProps() {
   const newsItems = await getAllNews();
-  const processedNews = newsItems.map((n) => ({ ...n, date: n.date ? new Date(n.date).toISOString() : null }));
+  const processedNews = newsItems.map((n) => ({
+    ...n,
+    date: n.date ? new Date(n.date).toISOString() : null,
+  }));
   return { props: { newsItems: processedNews }, revalidate: 60 };
 }

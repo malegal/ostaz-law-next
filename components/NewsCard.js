@@ -3,18 +3,40 @@ import Icon from './Icon';
 
 export default function NewsCard({ news }) {
   const badgeColors = {
-    'إنجاز قضائي': 'background:var(--matte-gold); color:#000;',
-    'فعالية': 'background:var(--deep-navy); color:#fff;',
-    'تطوير': 'background:var(--very-dark-navy); color:#fff;',
+    'إنجاز قضائي': {
+      background: 'var(--matte-gold)',
+      color: '#000',
+    },
+    'فعالية': {
+      background: 'var(--deep-navy)',
+      color: '#fff',
+    },
+    'تطوير': {
+      background: 'var(--very-dark-navy)',
+      color: '#fff',
+    },
   };
-  const badgeStyle = badgeColors[news.category] || 'background:var(--matte-gold); color:#000;';
+
+  const badgeStyle =
+    badgeColors[news.category] || {
+      background: 'var(--matte-gold)',
+      color: '#000',
+    };
 
   return (
     <div className="sector-link">
       <Link href={`/news/${news.slug}`} style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
         <div className="experience-card" style={{ textAlign: 'right', position: 'relative' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
-            <span style={{ ...badgeStyle, padding: '0.1rem 0.8rem', borderRadius: '20px', fontSize: '0.6rem', fontWeight: '800' }}>
+            <span
+              style={{
+                ...badgeStyle,
+                padding: '0.1rem 0.8rem',
+                borderRadius: '20px',
+                fontSize: '0.6rem',
+                fontWeight: '800',
+              }}
+            >
               {news.category || 'خبر'}
             </span>
             <span style={{ fontSize: '0.7rem', color: 'var(--text-secondary)' }}>
