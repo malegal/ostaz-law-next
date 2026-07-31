@@ -162,7 +162,7 @@ export default function ClientInquiry() {
         .search-card:hover { border-color: var(--matte-gold); box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
         .search-card .icon-header { width: 64px; height: 64px; border-radius: 50%; background: rgba(176,141,87,0.05); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; }
         .search-card .icon-header .icon-svg { font-size: 1.8rem; color: var(--matte-gold); }
-        .search-card h2 { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 900; color: var(--charcoal); text-align: center; margin-bottom: 0.3rem; }
+        .search-card h2 { font-size: 1.8rem; font-weight: 900; color: var(--charcoal); text-align: center; margin-bottom: 0.3rem; }
         .search-card .sub { text-align: center; color: var(--charcoal); font-weight: 700; font-size: 0.95rem; margin-bottom: 1.8rem; }
         .legal-disclaimer { background: rgba(176,141,87,0.03); border-right: 3px solid var(--matte-gold); padding: 1rem 1.2rem; border-radius: 10px; margin-bottom: 1.5rem; display: block; }
         .legal-disclaimer .disclaimer-title { font-weight: 700; font-size: 0.8rem; color: var(--charcoal); margin-bottom: 0.2rem; display: flex; align-items: center; gap: 0.4rem; }

@@ -226,7 +226,7 @@ export default function Specialties() {
         .hero-specialties .hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; width: 100%; }
         .hero-specialties .hero-title-wrap { text-align: center; }
         .hero-specialties .hero-title-wrap .en-tag { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.4em; text-transform: uppercase; color: var(--matte-gold); opacity: 0.5; display: block; margin-bottom: 0.3rem; }
-        .hero-specialties .hero-title-wrap h1 { font-family: var(--font-serif); font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 900; color: #fff; line-height: 1.1; }
+        .hero-specialties .hero-title-wrap h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 900; color: #fff; line-height: 1.1; }
         .hero-specialties .hero-title-wrap h1 .gold-text { color: var(--matte-gold); }
         .hero-specialties .hero-title-wrap .sub { font-size: clamp(1rem, 1.3vw, 1.2rem); font-weight: 400; color: rgba(255,255,255,0.5); max-width: 700px; margin: 0.8rem auto 0; line-height: 1.7; }
         .hero-specialties .hero-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-top: 1.8rem; }
@@ -263,7 +263,7 @@ export default function Specialties() {
         .specialty-details .detail-cta .btn-outline-gold { padding: 8px 24px; font-size: 0.75rem; }
         .specialty-details .detail-cta .btn-gold { padding: 8px 28px; font-size: 0.75rem; }
         .cta-section { text-align: center; padding: 4rem 2rem; background: var(--warm-off-white); border-top: 1px solid rgba(176,141,87,0.06); border-bottom: 1px solid rgba(176,141,87,0.06); }
-        .cta-section h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 900; color: var(--charcoal); }
+        .cta-section h2 { font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 900; color: var(--charcoal); }
         .cta-section p { max-width: 640px; margin: 0.4rem auto 1.8rem; color: var(--charcoal); font-weight: 700; font-size: 0.95rem; line-height: 1.8; }
         .faq-list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.6rem; }
         .faq-item { background: var(--pure-white); border-radius: 10px; border: 1px solid rgba(0,0,0,0.04); overflow: hidden; transition: all 0.3s var(--ease-out); box-shadow: 0 2px 10px rgba(0,0,0,0.02); }

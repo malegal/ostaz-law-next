@@ -173,7 +173,7 @@ export default function ClientInquiryResult() {
         .hero-result .hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; width: 100%; }
         .hero-result .hero-title-wrap { text-align: center; }
         .hero-result .hero-title-wrap .en-tag { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.4em; text-transform: uppercase; color: var(--matte-gold); opacity: 0.5; display: block; margin-bottom: 0.3rem; }
-        .hero-result .hero-title-wrap h1 { font-family: var(--font-serif); font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 900; color: #fff; line-height: 1.1; }
+        .hero-result .hero-title-wrap h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 900; color: #fff; line-height: 1.1; }
         .hero-result .hero-title-wrap h1 .gold-text { color: var(--matte-gold); }
         .hero-result .hero-title-wrap .sub { font-size: clamp(1rem, 1.3vw, 1.2rem); font-weight: 400; color: rgba(255,255,255,0.55); max-width: 700px; margin: 0.8rem auto 0; line-height: 1.7; }
         .result-main { flex: 1; padding: 3rem 2rem 5rem; background: var(--warm-off-white); }
@@ -183,7 +183,7 @@ export default function ClientInquiryResult() {
         .result-card:hover::after { width: 100%; }
         .result-card:hover { border-color: var(--matte-gold); box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
         .result-header { text-align: center; border-bottom: 1px solid rgba(0,0,0,0.04); padding-bottom: 1.2rem; margin-bottom: 1.2rem; }
-        .result-header h2 { font-family: var(--font-serif); font-size: 2rem; font-weight: 900; color: var(--matte-gold); margin-bottom: 0.1rem; }
+        .result-header h2 { font-size: 2rem; font-weight: 900; color: var(--matte-gold); margin-bottom: 0.1rem; }
         .badge-role { background: var(--light-gray); color: rgba(34,34,34,0.5); padding: 0.2rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 500; display: inline-block; }
         .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 1.2rem; }
         .info-item { background: var(--light-gray); padding: 0.8rem 1rem; border-radius: 10px; border: 1px solid rgba(0,0,0,0.02); transition: all 0.3s ease; }

@@ -171,7 +171,7 @@ export default function NewsArchive({ newsItems }) {
         .hero-blog .hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; width: 100%; }
         .hero-blog .hero-title-wrap { text-align: center; }
         .hero-blog .hero-title-wrap .en-tag { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.4em; text-transform: uppercase; color: var(--matte-gold); opacity: 0.5; display: block; margin-bottom: 0.3rem; }
-        .hero-blog .hero-title-wrap h1 { font-family: var(--font-serif); font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 900; color: #fff; line-height: 1.1; }
+        .hero-blog .hero-title-wrap h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 900; color: #fff; line-height: 1.1; }
         .hero-blog .hero-title-wrap h1 .gold-text { color: var(--matte-gold); }
         .hero-blog .hero-title-wrap .sub { font-size: clamp(1rem, 1.3vw, 1.2rem); font-weight: 400; color: rgba(255,255,255,0.5); max-width: 700px; margin: 0.8rem auto 0; line-height: 1.7; }
         .blog-section { padding: 5rem 2rem; background: var(--warm-off-white); }

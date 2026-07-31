@@ -373,7 +373,7 @@ export default function About() {
         .hero-about .hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; width: 100%; }
         .hero-about .hero-title-wrap { text-align: center; margin-bottom: 3rem; }
         .hero-about .hero-title-wrap .en-tag { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.4em; text-transform: uppercase; color: var(--matte-gold); opacity: 0.5; display: block; margin-bottom: 0.3rem; }
-        .hero-about .hero-title-wrap h1 { font-family: var(--font-serif); font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 900; color: #fff; line-height: 1.1; }
+        .hero-about .hero-title-wrap h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 900; color: #fff; line-height: 1.1; }
         .hero-about .hero-title-wrap h1 .gold-text { color: var(--matte-gold); }
         .hero-about .hero-title-wrap .sub { font-size: clamp(1rem, 1.3vw, 1.2rem); font-weight: 500; color: rgba(255,255,255,0.8); max-width: 700px; margin: 0.8rem auto 0; line-height: 1.7; }
         .hero-about .hero-title-wrap .sub-gold { font-weight: 500; color: var(--matte-gold); margin-top: 0.2rem; }
@@ -388,7 +388,7 @@ export default function About() {
         .about-definition .def-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
         .about-definition .def-text p { color: var(--charcoal); font-weight: 700; font-size: 1.05rem; line-height: 1.9; margin-bottom: 0.8rem; }
         .about-definition .def-text .eyebrow { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.25em; text-transform: uppercase; color: var(--matte-gold); opacity: 0.5; display: block; margin-bottom: 0.3rem; }
-        .about-definition .def-text h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 900; color: var(--charcoal); line-height: 1.15; margin-bottom: 1rem; }
+        .about-definition .def-text h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 900; color: var(--charcoal); line-height: 1.15; margin-bottom: 1rem; }
         .about-definition .def-text h2 .gold-text { color: var(--matte-gold); }
         .about-definition .def-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
         .about-definition .def-card { background: var(--pure-white); padding: 1.2rem 1rem; border-radius: 10px; border: 1px solid rgba(0,0,0,0.04); text-align: center; transition: all 0.4s var(--ease-out); cursor: default; position: relative; }
@@ -419,7 +419,7 @@ export default function About() {
         .leadership-image { border-radius: 12px; overflow: hidden; border: 1px solid rgba(176,141,87,0.12); box-shadow: 0 8px 40px rgba(0,0,0,0.04); transition: filter 0.8s ease; }
         .leadership-image :global(img) { width: 100%; height: auto; aspect-ratio: 3/4; object-fit: cover; display: block; filter: grayscale(100%); transition: filter 1.5s ease; }
         .leadership-image.colorized :global(img) { filter: grayscale(0%); }
-        .leadership-content h3 { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 900; color: var(--charcoal); margin-bottom: 0.1rem; }
+        .leadership-content h3 { font-size: 1.8rem; font-weight: 900; color: var(--charcoal); margin-bottom: 0.1rem; }
         .leadership-content .title { font-size: 1rem; font-weight: 500; color: var(--matte-gold); margin-bottom: 0.2rem; }
         .leadership-content .en-title { font-size: 0.7rem; font-weight: 300; color: rgba(34,34,34,0.4); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.8rem; }
         .leadership-content p { color: var(--charcoal); font-weight: 700; line-height: 1.8; font-size: 0.95rem; margin-bottom: 0.6rem; }
@@ -428,7 +428,7 @@ export default function About() {
         .leadership-side .side-value { font-size: 1rem; font-weight: 700; color: var(--charcoal); margin-bottom: 1rem; }
         .leadership-side .side-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
         .leadership-side .side-tags span { background: var(--pure-white); padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.7rem; font-weight: 300; color: rgba(34,34,34,0.6); border: 1px solid rgba(0,0,0,0.04); }
-        .leadership-quote { margin-top: 1.5rem; padding: 1.5rem 2rem; border-right: 3px solid var(--matte-gold); background: rgba(176,141,87,0.03); border-radius: 8px; font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; color: var(--charcoal); line-height: 1.8; font-style: italic; }
+        .leadership-quote { margin-top: 1.5rem; padding: 1.5rem 2rem; border-right: 3px solid var(--matte-gold); background: rgba(176,141,87,0.03); border-radius: 8px; font-size: 1.1rem; font-weight: 700; color: var(--charcoal); line-height: 1.8; font-style: italic; }
         .process-footer { max-width: 800px; margin: 1.5rem auto 0; text-align: center; font-size: 0.95rem; color: var(--charcoal); font-weight: 700; line-height: 1.8; padding: 1.2rem 2rem; border-right: 2px solid var(--matte-gold); background: rgba(176,141,87,0.03); border-radius: 8px; }
         .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
         .trust-card { background: var(--pure-white); padding: 1.6rem 1.2rem; border-radius: 10px; border: 1px solid rgba(0,0,0,0.04); transition: all 0.4s var(--ease-out); box-shadow: 0 2px 10px rgba(0,0,0,0.02); text-align: center; cursor: default; position: relative; }
@@ -443,11 +443,11 @@ export default function About() {
         .founder-message { padding: 4rem 2rem; background: var(--very-dark-navy); color: #fff; }
         .founder-message .inner { max-width: 800px; margin: 0 auto; text-align: center; }
         .founder-message .quote-icon { font-size: 3rem; color: var(--matte-gold); opacity: 0.15; margin-bottom: 0.5rem; display: block; font-family: serif; }
-        .founder-message blockquote { font-family: var(--font-serif); font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 700; line-height: 1.9; color: rgba(255,255,255,0.9); margin-bottom: 1.5rem; }
-        .founder-message .signature { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; color: var(--matte-gold); }
+        .founder-message blockquote { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 700; line-height: 1.9; color: rgba(255,255,255,0.9); margin-bottom: 1.5rem; }
+        .founder-message .signature { font-size: 1.1rem; font-weight: 700; color: var(--matte-gold); }
         .founder-message .signature-sub { font-size: 0.7rem; font-weight: 300; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.06em; }
         .cta-final { background: var(--very-dark-navy); padding: 4.5rem 2rem; text-align: center; color: #fff; border-top: 1px solid rgba(176,141,87,0.06); }
-        .cta-final h2 { font-family: var(--font-serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 900; color: #fff; margin-bottom: 0.5rem; }
+        .cta-final h2 { font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 900; color: #fff; margin-bottom: 0.5rem; }
         .cta-final p { max-width: 640px; margin: 0.4rem auto 2rem; color: rgba(255,255,255,0.7); font-weight: 500; font-size: 1rem; line-height: 1.8; }
         .cta-final .cta-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
         @media (max-width: 1024px) { .philosophy-grid { grid-template-columns: repeat(2, 1fr); } .values-grid { grid-template-columns: repeat(2, 1fr); } .trust-grid { grid-template-columns: repeat(2, 1fr); } .gallery-grid { grid-template-columns: repeat(2, 1fr); } .leadership-grid { grid-template-columns: 1fr 1fr; gap: 2rem; } .leadership-side { grid-column: span 2; } .about-definition .def-grid { gap: 2rem; } .hero-about .hero-grid { gap: 2rem; } }

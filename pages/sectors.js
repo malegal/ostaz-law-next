@@ -348,7 +348,7 @@ export default function Sectors() {
         .hero-sectors .hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; width: 100%; }
         .hero-sectors .hero-title-wrap { text-align: center; max-width: 860px; margin: 0 auto; }
         .hero-sectors .hero-title-wrap .en-tag { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.4em; text-transform: uppercase; color: var(--matte-gold); opacity: 0.5; display: block; margin-bottom: 0.3rem; }
-        .hero-sectors .hero-title-wrap h1 { font-family: var(--font-serif); font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 900; color: #fff; line-height: 1.1; }
+        .hero-sectors .hero-title-wrap h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 900; color: #fff; line-height: 1.1; }
         .hero-sectors .hero-title-wrap h1 .gold-text { color: var(--matte-gold); }
         .hero-sectors .hero-title-wrap .sub { font-size: clamp(1rem, 1.3vw, 1.2rem); font-weight: 400; color: rgba(255,255,255,0.55); max-width: 720px; margin: 0.8rem auto 0; line-height: 1.8; }
         .hero-sectors .hero-cta { text-align: center; margin-top: 2rem; }
@@ -373,7 +373,7 @@ export default function Sectors() {
         .approach-step::after { content: ''; position: absolute; bottom: 0; right: 0; width: 0; height: 3px; background: var(--matte-gold); transition: width 0.6s var(--ease-out); }
         .approach-step:hover::after { width: 100%; }
         .approach-step:hover { border-color: var(--matte-gold); transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
-        .approach-step .num { font-family: var(--font-serif); font-size: 2rem; font-weight: 900; color: var(--matte-gold); opacity: 0.12; display: block; line-height: 1; }
+        .approach-step .num { font-size: 2rem; font-weight: 900; color: var(--matte-gold); opacity: 0.12; display: block; line-height: 1; }
         .approach-step h4 { font-size: 0.9rem; font-weight: 700; color: var(--charcoal); margin-top: 0.3rem; }
         .approach-step p { font-size: 0.75rem; color: var(--charcoal); font-weight: 700; line-height: 1.5; margin-top: 0.1rem; }
         .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
@@ -385,7 +385,7 @@ export default function Sectors() {
         .why-card h4 { font-size: 0.9rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.1rem; }
         .why-card p { font-size: 0.8rem; color: var(--charcoal); font-weight: 700; line-height: 1.6; }
         .cta-final { background: var(--very-dark-navy); padding: 4.5rem 2rem; text-align: center; color: #fff; border-top: 1px solid rgba(176,141,87,0.06); }
-        .cta-final h2 { font-family: var(--font-serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 900; color: #fff; margin-bottom: 0.5rem; }
+        .cta-final h2 { font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 900; color: #fff; margin-bottom: 0.5rem; }
         .cta-final p { max-width: 720px; margin: 0.4rem auto 2rem; color: rgba(255,255,255,0.5); font-weight: 300; font-size: 1rem; line-height: 1.8; }
         .cta-final .cta-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
         @media (max-width: 1024px) { .approach-timeline { grid-template-columns: repeat(3, 1fr); } .why-grid { grid-template-columns: repeat(2, 1fr); } }
