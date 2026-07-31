@@ -190,14 +190,8 @@ export default function Contact() {
               </div>
 
               <div className="map-container reveal">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3642.4!2d32.9!3d24.09!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDA1JzMxLjIiTiAzMsKwNTMnNDkuMiJF!5e0!3m2!1sen!2seg!4v1600000000000!5m2!1sen!2seg"
-                  allowFullScreen=""
-                  loading="lazy"
-                ></iframe>
-                <div className="map-overlay">
-                  <span><Icon name="map-pin" style={{ marginRight: '0.5rem' }} /> المقر الرئيسي في أسوان</span>
-                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3642.4!2d32.9!3d24.09!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDA1JzMxLjIiTiAzMsKwNTMnNDkuMiJF!5e0!3m2!1sen!2seg!4v1600000000000!5m2!1sen!2seg" allowFullScreen="" loading="lazy"></iframe>
+                <div className="map-overlay"><span><Icon name="map-pin" style={{ marginRight: '0.5rem' }} /> المقر الرئيسي في أسوان</span></div>
               </div>
 
               <div className="reveal text-center pt-2">
@@ -215,15 +209,9 @@ export default function Contact() {
             <div className="lg:col-span-7 reveal" style={{ transitionDelay: '0.2s' }}>
               <div className="tab-container">
                 <div className="tab-buttons">
-                  <button onClick={() => setActiveTab('consult')} className={`tab-btn ${activeTab === 'consult' ? 'active' : ''}`}>
-                    <Icon name="comment-dots" /> استشارة سريعة
-                  </button>
-                  <button onClick={() => setActiveTab('visit')} className={`tab-btn ${activeTab === 'visit' ? 'active' : ''}`}>
-                    <Icon name="calendar-check" /> حجز موعد
-                  </button>
-                  <button onClick={() => setActiveTab('representation')} className={`tab-btn ${activeTab === 'representation' ? 'active' : ''}`}>
-                    <Icon name="gavel" /> طلب تمثيل
-                  </button>
+                  <button onClick={() => setActiveTab('consult')} className={`tab-btn ${activeTab === 'consult' ? 'active' : ''}`}><Icon name="comment-dots" /> استشارة سريعة</button>
+                  <button onClick={() => setActiveTab('visit')} className={`tab-btn ${activeTab === 'visit' ? 'active' : ''}`}><Icon name="calendar-check" /> حجز موعد</button>
+                  <button onClick={() => setActiveTab('representation')} className={`tab-btn ${activeTab === 'representation' ? 'active' : ''}`}><Icon name="gavel" /> طلب تمثيل</button>
                 </div>
 
                 <div className={`tab-pane ${activeTab === 'consult' ? '' : 'hidden'}`}>
@@ -232,22 +220,10 @@ export default function Contact() {
                     <p className="text-sm" style={{ color: 'var(--charcoal)', fontWeight: '700' }}>املأ النموذج وسيتم تحويلك مباشرة للواتساب للرد الفوري</p>
                   </div>
                   <form id="consultForm" onSubmit={(e) => handleSubmit(e, 'consult')} className="space-y-4">
-                    <div className="form-group">
-                      <label htmlFor="consultName">الاسم بالكامل</label>
-                      <input type="text" id="consultName" placeholder="الاسم ثلاثي..." required />
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="consultPhone">رقم الهاتف / الواتساب</label>
-                      <input type="tel" id="consultPhone" placeholder="01xxxxxxxxx" required />
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="consultMessage">تفاصيل الاستشارة</label>
-                      <textarea id="consultMessage" rows="4" placeholder="يرجى كتابة ملخص للقضية أو الاستفسار..." required></textarea>
-                    </div>
-                    <button type="submit" className="btn-gold w-full py-3 rounded-lg flex items-center justify-center gap-3">
-                      <span>إرسال الاستشارة</span>
-                      <Icon name="whatsapp" style={{ fontSize: '1.5rem' }} />
-                    </button>
+                    <div className="form-group"><label htmlFor="consultName">الاسم بالكامل</label><input type="text" id="consultName" placeholder="الاسم ثلاثي..." required /></div>
+                    <div className="form-group"><label htmlFor="consultPhone">رقم الهاتف / الواتساب</label><input type="tel" id="consultPhone" placeholder="01xxxxxxxxx" required /></div>
+                    <div className="form-group"><label htmlFor="consultMessage">تفاصيل الاستشارة</label><textarea id="consultMessage" rows="4" placeholder="يرجى كتابة ملخص للقضية أو الاستفسار..." required></textarea></div>
+                    <button type="submit" className="btn-gold w-full py-3 rounded-lg flex items-center justify-center gap-3"><span>إرسال الاستشارة</span><Icon name="whatsapp" style={{ fontSize: '1.5rem' }} /></button>
                   </form>
                 </div>
 
@@ -257,36 +233,16 @@ export default function Contact() {
                     <p className="text-sm" style={{ color: 'var(--charcoal)', fontWeight: '700' }}>ناقش قضيتك وجهاً لوجه مع الأستاذ محمود عبد الحميد</p>
                   </div>
                   <form id="visitForm" onSubmit={(e) => handleSubmit(e, 'visit')} className="space-y-4">
-                    <div className="form-group">
-                      <label htmlFor="visitName">الاسم بالكامل</label>
-                      <input type="text" id="visitName" placeholder="الاسم ثلاثي..." required />
-                    </div>
+                    <div className="form-group"><label htmlFor="visitName">الاسم بالكامل</label><input type="text" id="visitName" placeholder="الاسم ثلاثي..." required /></div>
                     <div className="grid md:grid-cols-2 gap-4">
-                      <div className="form-group">
-                        <label htmlFor="visitPhone">رقم الهاتف</label>
-                        <input type="tel" id="visitPhone" placeholder="01xxxxxxxxx" required />
-                      </div>
-                      <div className="form-group">
-                        <label htmlFor="visitDate">تاريخ المقابلة المفضل</label>
-                        <input type="date" id="visitDate" required />
-                      </div>
+                      <div className="form-group"><label htmlFor="visitPhone">رقم الهاتف</label><input type="tel" id="visitPhone" placeholder="01xxxxxxxxx" required /></div>
+                      <div className="form-group"><label htmlFor="visitDate">تاريخ المقابلة المفضل</label><input type="date" id="visitDate" required /></div>
                     </div>
-                    <div className="form-group">
-                      <label htmlFor="visitLocation">موقع المقابلة المفضل</label>
-                      <select id="visitLocation">
-                        <option value="أسوان">المقر الرئيسي - أسوان</option>
-                        <option value="القاهرة">فرع القاهرة</option>
-                        <option value="الإسكندرية">فرع الإسكندرية</option>
-                      </select>
+                    <div className="form-group"><label htmlFor="visitLocation">موقع المقابلة المفضل</label>
+                      <select id="visitLocation"><option value="أسوان">المقر الرئيسي - أسوان</option><option value="القاهرة">فرع القاهرة</option><option value="الإسكندرية">فرع الإسكندرية</option></select>
                     </div>
-                    <div className="form-group">
-                      <label htmlFor="visitReason">سبب الزيارة</label>
-                      <textarea id="visitReason" rows="3" placeholder="استشارة بخصوص قضية..." required></textarea>
-                    </div>
-                    <button type="submit" className="btn-gold w-full py-3 rounded-lg flex items-center justify-center gap-3">
-                      <span>تأكيد طلب الحجز</span>
-                      <Icon name="calendar-check" />
-                    </button>
+                    <div className="form-group"><label htmlFor="visitReason">سبب الزيارة</label><textarea id="visitReason" rows="3" placeholder="استشارة بخصوص قضية..." required></textarea></div>
+                    <button type="submit" className="btn-gold w-full py-3 rounded-lg flex items-center justify-center gap-3"><span>تأكيد طلب الحجز</span><Icon name="calendar-check" /></button>
                   </form>
                 </div>
 
@@ -296,66 +252,32 @@ export default function Contact() {
                     <p className="text-sm" style={{ color: 'var(--charcoal)', fontWeight: '700' }}>قدم طلباً لتولي قضيتك بالكامل من قبل الأستاذ محمود عبد الحميد</p>
                   </div>
                   <form id="representationForm" onSubmit={(e) => handleSubmit(e, 'representation')} className="space-y-4">
-                    <div className="form-group">
-                      <label htmlFor="repName">الاسم بالكامل</label>
-                      <input type="text" id="repName" placeholder="الاسم ثلاثي..." required />
+                    <div className="form-group"><label htmlFor="repName">الاسم بالكامل</label><input type="text" id="repName" placeholder="الاسم ثلاثي..." required /></div>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="form-group"><label htmlFor="repPhone">رقم الهاتف / الواتساب</label><input type="tel" id="repPhone" placeholder="01xxxxxxxxx" required /></div>
+                      <div className="form-group"><label htmlFor="repEmail">البريد الإلكتروني</label><input type="email" id="repEmail" placeholder="example@mail.com" required /></div>
                     </div>
                     <div className="grid md:grid-cols-2 gap-4">
-                      <div className="form-group">
-                        <label htmlFor="repPhone">رقم الهاتف / الواتساب</label>
-                        <input type="tel" id="repPhone" placeholder="01xxxxxxxxx" required />
-                      </div>
-                      <div className="form-group">
-                        <label htmlFor="repEmail">البريد الإلكتروني</label>
-                        <input type="email" id="repEmail" placeholder="example@mail.com" required />
-                      </div>
-                    </div>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div className="form-group">
-                        <label htmlFor="repCaseType">نوع القضية</label>
-                        <select id="repCaseType" required>
-                          <option value="">اختر نوع القضية</option>
-                          <option value="مدني">مدني</option>
-                          <option value="تجاري">تجاري</option>
-                          <option value="أسرة">أسرة / أحوال شخصية</option>
-                          <option value="جنائي">جنائي</option>
-                          <option value="إداري">إداري</option>
-                          <option value="عقاري">عقاري</option>
-                          <option value="عمالي">عمالي</option>
-                          <option value="دستوري">دستوري</option>
-                          <option value="تحكيم">تحكيم</option>
+                      <div className="form-group"><label htmlFor="repCaseType">نوع القضية</label>
+                        <select id="repCaseType" required><option value="">اختر نوع القضية</option>
+                          <option value="مدني">مدني</option><option value="تجاري">تجاري</option><option value="أسرة">أسرة / أحوال شخصية</option>
+                          <option value="جنائي">جنائي</option><option value="إداري">إداري</option><option value="عقاري">عقاري</option>
+                          <option value="عمالي">عمالي</option><option value="دستوري">دستوري</option><option value="تحكيم">تحكيم</option>
                           <option value="أخرى">أخرى</option>
                         </select>
                       </div>
-                      <div className="form-group">
-                        <label htmlFor="repStage">المرحلة القضائية</label>
-                        <select id="repStage" required>
-                          <option value="">اختر المرحلة</option>
-                          <option value="ابتدائي">ابتدائي</option>
-                          <option value="استئناف">استئناف</option>
-                          <option value="نقض">نقض</option>
-                          <option value="تنفيذ">تنفيذ</option>
-                          <option value="دستورية">دستورية</option>
-                          <option value="إدارية عليا">إدارية عليا</option>
+                      <div className="form-group"><label htmlFor="repStage">المرحلة القضائية</label>
+                        <select id="repStage" required><option value="">اختر المرحلة</option>
+                          <option value="ابتدائي">ابتدائي</option><option value="استئناف">استئناف</option><option value="نقض">نقض</option>
+                          <option value="تنفيذ">تنفيذ</option><option value="دستورية">دستورية</option><option value="إدارية عليا">إدارية عليا</option>
                           <option value="أخرى">أخرى</option>
                         </select>
                       </div>
                     </div>
-                    <div className="form-group">
-                      <label htmlFor="repCourt">الجهة القضائية (المحكمة)</label>
-                      <input type="text" id="repCourt" placeholder="مثال: محكمة النقض، المحكمة الإدارية العليا، محكمة استئناف القاهرة..." required />
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="repCaseNumber">رقم القضية (إن وجد)</label>
-                      <input type="text" id="repCaseNumber" placeholder="رقم القضية والسنة" />
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="repDescription">وصف القضية</label>
-                      <textarea id="repDescription" rows="5" placeholder="يرجى كتابة وصف تفصيلي للقضية، والجهات المعنية، وأي معلومات أخرى تراها مهمة..." required></textarea>
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="repContract">إرفاق عقد الخدمة (PDF) <span style={{ color: 'var(--charcoal)', fontWeight: '400' }}>(اختياري)</span></label>
-                      <input type="file" id="repContract" accept=".pdf" />
+                    <div className="form-group"><label htmlFor="repCourt">الجهة القضائية (المحكمة)</label><input type="text" id="repCourt" placeholder="مثال: محكمة النقض، المحكمة الإدارية العليا، محكمة استئناف القاهرة..." required /></div>
+                    <div className="form-group"><label htmlFor="repCaseNumber">رقم القضية (إن وجد)</label><input type="text" id="repCaseNumber" placeholder="رقم القضية والسنة" /></div>
+                    <div className="form-group"><label htmlFor="repDescription">وصف القضية</label><textarea id="repDescription" rows="5" placeholder="يرجى كتابة وصف تفصيلي للقضية، والجهات المعنية، وأي معلومات أخرى تراها مهمة..." required></textarea></div>
+                    <div className="form-group"><label htmlFor="repContract">إرفاق عقد الخدمة (PDF) <span style={{ color: 'var(--charcoal)', fontWeight: '400' }}>(اختياري)</span></label><input type="file" id="repContract" accept=".pdf" />
                       <p style={{ fontSize: '0.65rem', color: 'var(--charcoal)', fontWeight: '700', marginTop: '0.2rem' }}>يمكنك إرفاق عقد الخدمة الموقع بصيغة PDF</p>
                     </div>
                     <div className="form-group">
@@ -365,10 +287,7 @@ export default function Contact() {
                       </label>
                       <p style={{ fontSize: '0.65rem', color: 'var(--charcoal)', fontWeight: '700', marginTop: '0.2rem' }}>سيتم توفير رابط لإرسال المستندات بعد إرسال الطلب</p>
                     </div>
-                    <button type="submit" className="btn-gold w-full py-3 rounded-lg flex items-center justify-center gap-3">
-                      <span>إرسال طلب التمثيل</span>
-                      <Icon name="gavel" />
-                    </button>
+                    <button type="submit" className="btn-gold w-full py-3 rounded-lg flex items-center justify-center gap-3"><span>إرسال طلب التمثيل</span><Icon name="gavel" /></button>
                   </form>
                 </div>
               </div>
@@ -429,7 +348,7 @@ export default function Contact() {
         .tab-pane.hidden { display: none; }
         .form-group { margin-bottom: 1.2rem; }
         .form-group label { display: block; font-size: 0.75rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.2rem; }
-        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 0.6rem 0.8rem; border: 1px solid rgba(0,0,0,0.06); border-radius: 8px; font-size: 0.9rem; font-family: var(--font-ar); background: var(--warm-off-white); color: var(--charcoal); transition: border-color 0.3s ease, box-shadow 0.3s ease; outline: none; font-weight: 700; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 0.6rem 0.8rem; border: 1px solid rgba(0,0,0,0.06); border-radius: 8px; font-size: 0.9rem; background: var(--warm-off-white); color: var(--charcoal); transition: border-color 0.3s ease, box-shadow 0.3s ease; outline: none; font-weight: 700; }
         .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--matte-gold); box-shadow: 0 0 0 3px rgba(176,141,87,0.05); }
         .form-group textarea { resize: vertical; min-height: 100px; }
         .form-group input[type="file"] { padding: 0.4rem; background: var(--pure-white); border: 1px dashed rgba(0,0,0,0.1); }

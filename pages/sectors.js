@@ -115,7 +115,6 @@ export default function Sectors() {
           </div>
 
           <div className="industries-grid">
-            {/* الشركات التجارية */}
             <div className="industry-card gold-underline-card reveal reveal-d1">
               <div className="icon-wrap"><Icon name="building" /></div>
               <h3>الشركات التجارية</h3>
@@ -129,7 +128,6 @@ export default function Sectors() {
               <Link href="/contact?tab=consult&sector=الشركات%20التجارية" className="btn-sm">اطلب استشارة</Link>
             </div>
 
-            {/* الجمعيات والمؤسسات الأهلية */}
             <div className="industry-card gold-underline-card reveal reveal-d2">
               <div className="icon-wrap"><Icon name="hand-holding-heart" /></div>
               <h3>الجمعيات والمؤسسات الأهلية</h3>
@@ -142,7 +140,6 @@ export default function Sectors() {
               <Link href="/contact?tab=consult&sector=الجمعيات%20الأهلية" className="btn-sm">اطلب استشارة</Link>
             </div>
 
-            {/* المستثمرون */}
             <div className="industry-card gold-underline-card reveal reveal-d3">
               <div className="icon-wrap"><Icon name="chart-line" /></div>
               <h3>المستثمرون</h3>
@@ -154,7 +151,6 @@ export default function Sectors() {
               <Link href="/contact?tab=consult&sector=المستثمرون" className="btn-sm">اطلب استشارة</Link>
             </div>
 
-            {/* المطورون العقاريون */}
             <div className="industry-card gold-underline-card reveal reveal-d1">
               <div className="icon-wrap"><Icon name="city" /></div>
               <h3>المطورون العقاريون</h3>
@@ -166,7 +162,6 @@ export default function Sectors() {
               <Link href="/contact?tab=consult&sector=المطورون%20العقاريون" className="btn-sm">اطلب استشارة</Link>
             </div>
 
-            {/* المقاولون */}
             <div className="industry-card gold-underline-card reveal reveal-d2">
               <div className="icon-wrap"><Icon name="hard-hat" /></div>
               <h3>المقاولون</h3>
@@ -178,7 +173,6 @@ export default function Sectors() {
               <Link href="/contact?tab=consult&sector=المقاولون" className="btn-sm">اطلب استشارة</Link>
             </div>
 
-            {/* الأفراد */}
             <div className="industry-card gold-underline-card reveal reveal-d3">
               <div className="icon-wrap"><Icon name="user" /></div>
               <h3>الأفراد</h3>
@@ -191,7 +185,6 @@ export default function Sectors() {
               <Link href="/contact?tab=consult&sector=الأفراد" className="btn-sm">اطلب استشارة</Link>
             </div>
 
-            {/* الشركاء */}
             <div className="industry-card gold-underline-card reveal reveal-d1">
               <div className="icon-wrap"><Icon name="handshake" /></div>
               <h3>الشركاء</h3>
@@ -205,7 +198,6 @@ export default function Sectors() {
               <Link href="/contact?tab=consult&sector=الشركاء" className="btn-sm">اطلب استشارة</Link>
             </div>
 
-            {/* الورثة */}
             <div className="industry-card gold-underline-card reveal reveal-d2">
               <div className="icon-wrap"><Icon name="tree" /></div>
               <h3>الورثة</h3>
@@ -218,7 +210,6 @@ export default function Sectors() {
               <Link href="/contact?tab=consult&sector=الورثة" className="btn-sm">اطلب استشارة</Link>
             </div>
 
-            {/* قضايا التعويضات */}
             <div className="industry-card gold-underline-card reveal reveal-d3">
               <div className="icon-wrap"><Icon name="hand-holding-usd" /></div>
               <h3>قضايا التعويضات</h3>
@@ -232,7 +223,6 @@ export default function Sectors() {
               <Link href="/contact?tab=consult&sector=قضايا%20التعويضات" className="btn-sm">اطلب استشارة</Link>
             </div>
 
-            {/* العمال وأصحاب الأعمال */}
             <div className="industry-card gold-underline-card reveal reveal-d1">
               <div className="icon-wrap"><Icon name="briefcase" /></div>
               <h3>العمال وأصحاب الأعمال</h3>

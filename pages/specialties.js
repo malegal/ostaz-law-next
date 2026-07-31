@@ -269,7 +269,7 @@ export default function Specialties() {
         .faq-item { background: var(--pure-white); border-radius: 10px; border: 1px solid rgba(0,0,0,0.04); overflow: hidden; transition: all 0.3s var(--ease-out); box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
         .faq-item:hover { border-color: rgba(176,141,87,0.15); }
         .faq-item.active { border-color: var(--matte-gold); }
-        .faq-question { width: 100%; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; background: transparent; border: none; color: var(--charcoal); font-size: 0.95rem; font-weight: 700; text-align: right; gap: 1rem; font-family: var(--font-ar); transition: color 0.3s ease; cursor: pointer; position: relative; }
+        .faq-question { width: 100%; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; background: transparent; border: none; color: var(--charcoal); font-size: 0.95rem; font-weight: 700; text-align: right; gap: 1rem; transition: color 0.3s ease; cursor: pointer; position: relative; }
         .faq-question::after { content: ''; position: absolute; bottom: 0; right: 0; width: 0; height: 2px; background: var(--matte-gold); transition: width 0.4s var(--ease-out); }
         .faq-question:hover::after { width: 100%; }
         .faq-question:hover { color: var(--matte-gold); }

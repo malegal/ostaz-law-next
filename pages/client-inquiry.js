@@ -176,7 +176,7 @@ export default function ClientInquiry() {
         .consent-wrapper .consent-label strong { color: var(--charcoal); font-weight: 700; }
         .input-group-custom { display: flex; align-items: center; background: #FFFFFF !important; border: 1px solid #D1D1D1 !important; border-radius: 10px; margin-bottom: 1rem; overflow: hidden; transition: all 0.3s ease; }
         .input-group-custom:focus-within { border-color: var(--matte-gold) !important; box-shadow: 0 0 0 3px rgba(176,141,87,0.05); }
-        .input-group-custom .form-control-custom { background: #FFFFFF !important; border: none !important; color: #222222 !important; padding: 0.7rem 0.8rem; width: 100%; font-size: 1rem; outline: none; text-align: right; font-family: var(--font-ar); display: block; font-weight: 700; }
+        .input-group-custom .form-control-custom { background: #FFFFFF !important; border: none !important; color: #222222 !important; padding: 0.7rem 0.8rem; width: 100%; font-size: 1rem; outline: none; text-align: right; display: block; font-weight: 700; }
         .input-group-custom .form-control-custom::placeholder { color: #999999 !important; font-weight: 300; opacity: 1; }
         .input-group-custom .fixed-prefix { background: #F5F5F5 !important; color: #555555 !important; padding: 0.7rem 0.8rem; font-weight: 700; font-size: 0.85rem; border-left: 1px solid #E5E5E5 !important; font-family: monospace; flex-shrink: 0; }
         .btn-search { width: 100%; padding: 0.8rem; border-radius: 10px; font-size: 1rem; font-weight: 700; margin-top: 0.5rem; }

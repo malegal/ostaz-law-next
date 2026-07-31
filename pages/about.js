@@ -442,7 +442,7 @@ export default function About() {
         .gallery-item:hover { border-color: var(--matte-gold); transform: scale(1.01); box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
         .founder-message { padding: 4rem 2rem; background: var(--very-dark-navy); color: #fff; }
         .founder-message .inner { max-width: 800px; margin: 0 auto; text-align: center; }
-        .founder-message .quote-icon { font-size: 3rem; color: var(--matte-gold); opacity: 0.15; margin-bottom: 0.5rem; display: block; font-family: serif; }
+        .founder-message .quote-icon { font-size: 3rem; color: var(--matte-gold); opacity: 0.15; margin-bottom: 0.5rem; display: block; }
         .founder-message blockquote { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 700; line-height: 1.9; color: rgba(255,255,255,0.9); margin-bottom: 1.5rem; }
         .founder-message .signature { font-size: 1.1rem; font-weight: 700; color: var(--matte-gold); }
         .founder-message .signature-sub { font-size: 0.7rem; font-weight: 300; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.06em; }
