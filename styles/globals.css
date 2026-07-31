@@ -449,7 +449,7 @@ button {
 }
 .header-nav a {
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: 500;
     color: rgba(255, 255, 255, 0.6);
     transition: color 0.3s ease;
     position: relative;
@@ -530,7 +530,7 @@ button {
 }
 .mobile-menu nav a {
     font-size: 1.4rem;
-    font-weight: 700;
+    font-weight: 500;
     color: rgba(255, 255, 255, 0.6);
     transition: color 0.3s ease;
     position: relative;
@@ -636,6 +636,7 @@ button {
     color: var(--matte-gold);
     opacity: 0.8;
     margin-bottom: 0.8rem;
+    font-family: var(--font-body-ar);
 }
 
 .hero-title {

@@ -1,7 +1,7 @@
 import '../styles/globals.css';
-import { Amiri, Tajawal, Playfair_Display, Montserrat, IBM_Plex_Sans_Arabic } from 'next/font/google';
+import { Amiri, Playfair_Display, Montserrat, IBM_Plex_Sans_Arabic } from 'next/font/google';
 
-// خط النصوص العربية الثانوية والوصفية (الجديد)
+// خط النصوص العربية الثانوية والوصفية + القائمة
 const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
   subsets: ['arabic'],
   weight: ['400', '500', '700'],
@@ -10,17 +10,7 @@ const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
   preload: false,
 });
 
-// خط النصوص العربية السابق - تم إلغاء استخدامه لصالح IBM Plex Sans Arabic
-// لكن نحتفظ به للأغراض الاحتياطية
-const tajawal = Tajawal({
-  subsets: ['arabic'],
-  weight: ['400', '500', '700', '800'],
-  variable: '--font-ar-fallback',
-  display: 'swap',
-  preload: false,
-});
-
-// خط الـHero والعناوين الرئيسية (يُحمّل بأولوية عالية)
+// خط الـHero والعناوين الرئيسية
 const amiri = Amiri({
   subsets: ['arabic'],
   weight: ['400', '700'],
@@ -50,7 +40,7 @@ const montserrat = Montserrat({
 function MyApp({ Component, pageProps }) {
   return (
     <main
-      className={`${ibmPlexSansArabic.variable} ${tajawal.variable} ${amiri.variable} ${playfair.variable} ${montserrat.variable}`}
+      className={`${ibmPlexSansArabic.variable} ${amiri.variable} ${playfair.variable} ${montserrat.variable}`}
       style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}
     >
       <Component {...pageProps} />
