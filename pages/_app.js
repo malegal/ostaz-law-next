@@ -1,37 +1,33 @@
 import '../styles/globals.css';
 import { Amiri, Tajawal, Playfair_Display, Montserrat } from 'next/font/google';
 
-// خط النصوص العربية (يستخدم في معظم المحتوى، لكن ليس في الـHero)
 const tajawal = Tajawal({
   subsets: ['arabic'],
-  weight: ['400', '500', '700', '800'], // فقط الأوزان المستخدمة فعلياً
+  weight: ['400', '500', '700', '800'],
   variable: '--font-ar',
   display: 'swap',
-  preload: false, // ليس ضرورياً للـHero، نؤجل تحميله
+  preload: false,
 });
 
-// خط الـHero والعناوين الرئيسية (LCP element)
 const amiri = Amiri({
   subsets: ['arabic'],
-  weight: ['700', '900'], // 900 يُستخدم في .hero-title، 700 في عناصر أخرى
+  weight: ['400', '700'],
   variable: '--font-serif',
   display: 'swap',
-  preload: true, // الأولوية القصوى لأن هذا الخط يظهر في الـHero
+  preload: true,
 });
 
-// خط الشعار النصي "OSTAZ" (يظهر في الهيدر، ليس جزءاً من LCP)
 const playfair = Playfair_Display({
   subsets: ['latin'],
-  weight: ['900'], // فقط الوزن المستخدم في .brand-primary
+  weight: ['700', '900'],
   variable: '--font-display',
   display: 'swap',
   preload: false,
 });
 
-// خط النصوص الإنجليزية الثانوية (مثل .brand-secondary)
 const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: ['400'], // فقط الوزن المستخدم
+  weight: ['400', '700'],
   variable: '--font-eng',
   display: 'swap',
   preload: false,
