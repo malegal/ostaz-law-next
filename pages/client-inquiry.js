@@ -154,36 +154,7 @@ export default function ClientInquiry() {
         </div>
       </section>
 
-      <style jsx>{`
-        .hero-title { margin-bottom: 2.8rem !important; }
-        .search-card { max-width: 600px; margin: 0 auto; background: var(--pure-white); border-radius: 16px; padding: 2.5rem 2rem; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 2px 10px rgba(0,0,0,0.02); transition: all 0.4s var(--ease-out); position: relative; overflow: visible; }
-        .search-card::after { content: ''; position: absolute; bottom: 0; right: 0; width: 0; height: 3px; background: var(--matte-gold); transition: width 0.6s var(--ease-out); }
-        .search-card:hover::after { width: 100%; }
-        .search-card:hover { border-color: var(--matte-gold); box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
-        .search-card .icon-header { width: 64px; height: 64px; border-radius: 50%; background: rgba(176,141,87,0.05); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; }
-        .search-card .icon-header .icon-svg { font-size: 1.8rem; color: var(--matte-gold); }
-        .search-card h2 { font-size: 1.8rem; font-weight: 900; color: var(--charcoal); text-align: center; margin-bottom: 0.3rem; }
-        .search-card .sub { text-align: center; color: var(--charcoal); font-weight: 700; font-size: 0.95rem; margin-bottom: 1.8rem; }
-        .legal-disclaimer { background: rgba(176,141,87,0.03); border-right: 3px solid var(--matte-gold); padding: 1rem 1.2rem; border-radius: 10px; margin-bottom: 1.5rem; display: block; }
-        .legal-disclaimer .disclaimer-title { font-weight: 700; font-size: 0.8rem; color: var(--charcoal); margin-bottom: 0.2rem; display: flex; align-items: center; gap: 0.4rem; }
-        .legal-disclaimer .disclaimer-title .icon-svg { color: var(--matte-gold); }
-        .legal-disclaimer .disclaimer-text { font-size: 0.8rem; color: var(--charcoal); line-height: 1.8; font-weight: 700; }
-        .legal-disclaimer .disclaimer-text strong { color: var(--charcoal); font-weight: 700; }
-        .consent-wrapper { display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: var(--light-gray); border-radius: 10px; border: 1px solid rgba(0,0,0,0.04); transition: all 0.3s ease; }
-        .consent-wrapper:focus-within { border-color: var(--matte-gold); box-shadow: 0 0 0 3px rgba(176,141,87,0.05); }
-        .consent-wrapper input[type="checkbox"] { width: 20px; height: 20px; min-width: 20px; margin-top: 0.2rem; accent-color: var(--matte-gold); cursor: pointer; }
-        .consent-wrapper .consent-label { font-size: 0.8rem; color: var(--charcoal); font-weight: 700; line-height: 1.6; }
-        .consent-wrapper .consent-label strong { color: var(--charcoal); font-weight: 700; }
-        .input-group-custom { display: flex; align-items: center; background: #FFFFFF !important; border: 1px solid #D1D1D1 !important; border-radius: 10px; margin-bottom: 1rem; overflow: hidden; transition: all 0.3s ease; }
-        .input-group-custom:focus-within { border-color: var(--matte-gold) !important; box-shadow: 0 0 0 3px rgba(176,141,87,0.05); }
-        .input-group-custom .form-control-custom { background: #FFFFFF !important; border: none !important; color: #222222 !important; padding: 0.7rem 0.8rem; width: 100%; font-size: 1rem; outline: none; text-align: right; font-family: var(--font-ar); display: block; font-weight: 700; }
-        .input-group-custom .form-control-custom::placeholder { color: #999999 !important; font-weight: 300; opacity: 1; }
-        .input-group-custom .fixed-prefix { background: #F5F5F5 !important; color: #555555 !important; padding: 0.7rem 0.8rem; font-weight: 700; font-size: 0.85rem; border-left: 1px solid #E5E5E5 !important; font-family: monospace; flex-shrink: 0; }
-        .btn-search { width: 100%; padding: 0.8rem; border-radius: 10px; font-size: 1rem; font-weight: 700; margin-top: 0.5rem; }
-        .btn-search:disabled { opacity: 0.5; cursor: not-allowed; transform: none !important; box-shadow: none !important; }
-        @media (max-width: 820px) { .search-card { padding: 1.8rem 1.2rem; } .hero-title { margin-bottom: 1.8rem !important; } }
-        @media (max-width: 640px) { .search-card h2 { font-size: 1.4rem; } .input-group-custom .form-control-custom { font-size: 0.9rem; padding: 0.5rem 0.6rem; } .input-group-custom .fixed-prefix { padding: 0.5rem 0.6rem; font-size: 0.75rem; } .legal-disclaimer { padding: 0.8rem 1rem; } .consent-wrapper { padding: 0.6rem 0.8rem; } .hero-title { margin-bottom: 1.5rem !important; } }
-      `}</style>
+      <style jsx>{/* تم حذف font-family المكررة، تعتمد على globals.css */}</style>
     </Layout>
   );
 }

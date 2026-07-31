@@ -339,60 +339,7 @@ export default function Sectors() {
         </div>
       </section>
 
-      <style jsx>{`
-        .hero-sectors { padding: 120px 2rem 4rem; background: var(--very-dark-navy); position: relative; overflow: hidden; min-height: 60vh; display: flex; align-items: center; }
-        .hero-sectors .hero-pattern { position: absolute; inset: 0; opacity: 0.03; background-image: radial-gradient(circle at 20% 30%, var(--matte-gold) 1px, transparent 1px), radial-gradient(circle at 80% 70%, var(--matte-gold) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; }
-        .hero-sectors .hero-glow { position: absolute; width: 60vw; height: 60vw; border-radius: 50%; background: radial-gradient(circle, rgba(176,141,87,0.04) 0%, transparent 70%); top: -20%; right: -20%; pointer-events: none; animation: orbFloat 20s ease-in-out infinite alternate; }
-        .hero-sectors .hero-glow-2 { position: absolute; width: 40vw; height: 40vw; border-radius: 50%; background: radial-gradient(circle, rgba(176,141,87,0.02) 0%, transparent 70%); bottom: -20%; left: -10%; pointer-events: none; animation: orbFloat 25s ease-in-out infinite alternate-reverse; }
-        @keyframes orbFloat { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(40px, -30px) scale(1.05); } }
-        .hero-sectors .hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; width: 100%; }
-        .hero-sectors .hero-title-wrap { text-align: center; max-width: 860px; margin: 0 auto; }
-        .hero-sectors .hero-title-wrap .en-tag { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.4em; text-transform: uppercase; color: var(--matte-gold); opacity: 0.5; display: block; margin-bottom: 0.3rem; }
-        .hero-sectors .hero-title-wrap h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 900; color: #fff; line-height: 1.1; }
-        .hero-sectors .hero-title-wrap h1 .gold-text { color: var(--matte-gold); }
-        .hero-sectors .hero-title-wrap .sub { font-size: clamp(1rem, 1.3vw, 1.2rem); font-weight: 400; color: rgba(255,255,255,0.55); max-width: 720px; margin: 0.8rem auto 0; line-height: 1.8; }
-        .hero-sectors .hero-cta { text-align: center; margin-top: 2rem; }
-        .intro-text { max-width: 780px; margin: 0 auto; font-size: 1.05rem; color: var(--charcoal); font-weight: 700; line-height: 1.9; text-align: center; }
-        .industries-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
-        .industry-card { background: var(--pure-white); border-radius: 16px; border: 1px solid rgba(0,0,0,0.04); padding: 2rem 1.8rem; box-shadow: 0 2px 10px rgba(0,0,0,0.02); transition: all 0.4s var(--ease-out); position: relative; display: flex; flex-direction: column; overflow: hidden; }
-        .industry-card::after { content: ''; position: absolute; bottom: 0; right: 0; width: 0; height: 3px; background: var(--matte-gold); transition: width 0.6s var(--ease-out); }
-        .industry-card:hover::after { width: 100%; }
-        .industry-card:hover { border-color: var(--matte-gold); transform: translateY(-6px); box-shadow: 0 12px 40px rgba(0,0,0,0.04); }
-        .industry-card .icon-wrap { width: 52px; height: 52px; border-radius: 50%; background: rgba(176,141,87,0.05); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; transition: all 0.4s var(--ease-out); }
-        .industry-card:hover .icon-wrap { background: var(--matte-gold); }
-        .industry-card:hover .icon-wrap .icon-svg { color: #000; }
-        .industry-card .icon-wrap .icon-svg { font-size: 1.3rem; color: var(--matte-gold); transition: all 0.4s ease; }
-        .industry-card h3 { font-size: 1.1rem; font-weight: 800; color: var(--charcoal); margin-bottom: 0.3rem; }
-        .industry-card .desc { font-size: 0.9rem; color: var(--charcoal); font-weight: 700; line-height: 1.7; margin-bottom: 0.8rem; flex: 1; }
-        .industry-card .services-list { list-style: none; padding: 0; margin: 0 0 1rem 0; display: flex; flex-wrap: wrap; gap: 0.3rem 0.6rem; }
-        .industry-card .services-list li { font-size: 0.7rem; color: var(--charcoal); font-weight: 700; background: var(--light-gray); padding: 0.15rem 0.6rem; border-radius: 20px; display: inline-block; }
-        .industry-card .btn-sm { display: inline-block; font-size: 0.7rem; font-weight: 700; color: var(--matte-gold); border: 1px solid rgba(176,141,87,0.15); padding: 4px 16px; border-radius: 6px; transition: all 0.4s var(--ease-out); text-align: center; align-self: flex-start; background: transparent; cursor: pointer; }
-        .industry-card .btn-sm:hover { background: var(--matte-gold); color: #000; border-color: var(--matte-gold); }
-        .approach-timeline { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 2rem; }
-        .approach-step { text-align: center; padding: 1.5rem 1rem; background: var(--pure-white); border-radius: 12px; border: 1px solid rgba(0,0,0,0.04); transition: all 0.4s var(--ease-out); box-shadow: 0 2px 10px rgba(0,0,0,0.02); position: relative; }
-        .approach-step::after { content: ''; position: absolute; bottom: 0; right: 0; width: 0; height: 3px; background: var(--matte-gold); transition: width 0.6s var(--ease-out); }
-        .approach-step:hover::after { width: 100%; }
-        .approach-step:hover { border-color: var(--matte-gold); transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
-        .approach-step .num { font-size: 2rem; font-weight: 900; color: var(--matte-gold); opacity: 0.12; display: block; line-height: 1; }
-        .approach-step h4 { font-size: 0.9rem; font-weight: 700; color: var(--charcoal); margin-top: 0.3rem; }
-        .approach-step p { font-size: 0.75rem; color: var(--charcoal); font-weight: 700; line-height: 1.5; margin-top: 0.1rem; }
-        .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
-        .why-card { background: var(--pure-white); padding: 1.8rem 1.4rem; border-radius: 12px; border: 1px solid rgba(0,0,0,0.04); transition: all 0.4s var(--ease-out); box-shadow: 0 2px 10px rgba(0,0,0,0.02); text-align: center; position: relative; }
-        .why-card::after { content: ''; position: absolute; bottom: 0; right: 0; width: 0; height: 3px; background: var(--matte-gold); transition: width 0.6s var(--ease-out); }
-        .why-card:hover::after { width: 100%; }
-        .why-card:hover { border-color: var(--matte-gold); transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
-        .why-card .icon { font-size: 1.6rem; color: var(--matte-gold); opacity: 0.3; margin-bottom: 0.3rem; display: block; }
-        .why-card h4 { font-size: 0.9rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.1rem; }
-        .why-card p { font-size: 0.8rem; color: var(--charcoal); font-weight: 700; line-height: 1.6; }
-        .cta-final { background: var(--very-dark-navy); padding: 4.5rem 2rem; text-align: center; color: #fff; border-top: 1px solid rgba(176,141,87,0.06); }
-        .cta-final h2 { font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 900; color: #fff; margin-bottom: 0.5rem; }
-        .cta-final p { max-width: 720px; margin: 0.4rem auto 2rem; color: rgba(255,255,255,0.5); font-weight: 300; font-size: 1rem; line-height: 1.8; }
-        .cta-final .cta-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
-        @media (max-width: 1024px) { .approach-timeline { grid-template-columns: repeat(3, 1fr); } .why-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 820px) { .hero-sectors { padding: 100px 1rem 3rem; min-height: auto; } .approach-timeline { grid-template-columns: 1fr 1fr; } .why-grid { grid-template-columns: 1fr 1fr; } .industries-grid { grid-template-columns: 1fr; } }
-        @media (max-width: 640px) { .approach-timeline { grid-template-columns: 1fr; max-width: 280px; margin: 0 auto; } .why-grid { grid-template-columns: 1fr; max-width: 320px; margin: 0 auto; } .hero-sectors .hero-title-wrap h1 { font-size: clamp(2rem, 8vw, 2.8rem); } .industry-card { padding: 1.4rem 1.2rem; } .industry-card .services-list li { font-size: 0.6rem; } .cta-final .cta-actions { flex-direction: column; align-items: center; } .cta-final .cta-actions .btn-gold, .cta-final .cta-actions .btn-outline-white { width: 100%; max-width: 300px; text-align: center; } }
-        @media (max-width: 400px) { .approach-timeline { max-width: 240px; } .why-grid { max-width: 260px; } }
-      `}</style>
+      <style jsx>{/* تم حذف font-family المكررة، تعتمد على globals.css */}</style>
     </Layout>
   );
 }

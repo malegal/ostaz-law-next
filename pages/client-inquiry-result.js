@@ -57,18 +57,7 @@ export default function ClientInquiryResult() {
             </div>
           </div>
         </section>
-        <style jsx>{`
-          .result-main { flex: 1; padding: 3rem 2rem 5rem; background: var(--warm-off-white); }
-          .result-main .inner { max-width: 900px; margin: 0 auto; }
-          .result-card { background: var(--pure-white); border-radius: 16px; padding: 2.5rem 2rem; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 2px 10px rgba(0,0,0,0.02); transition: all 0.4s var(--ease-out); position: relative; overflow: hidden; }
-          .result-card::after { content: ''; position: absolute; bottom: 0; right: 0; width: 0; height: 3px; background: var(--matte-gold); transition: width 0.6s var(--ease-out); }
-          .result-card:hover::after { width: 100%; }
-          .result-card:hover { border-color: var(--matte-gold); box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
-          .error-container { padding: 2rem 0; text-align: center; }
-          .error-container h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.3rem; color: var(--charcoal); }
-          .error-container p { color: rgba(34,34,34,0.5); max-width: 480px; margin: 0 auto; }
-          .error-actions { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
-        `}</style>
+        <style jsx>{/* تم حذف font-family المكررة، تعتمد على globals.css */}</style>
       </Layout>
     );
   }
