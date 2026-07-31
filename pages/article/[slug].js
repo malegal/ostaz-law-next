@@ -64,7 +64,14 @@ export default function ArticlePage({ article, contentHtml }) {
         </div>
       </div>
 
-      <style jsx>{/* تم حذف font-family المكررة، تعتمد على globals.css */}</style>
+      <style jsx>{`
+        .article-wrapper { max-width: 820px; margin: 0 auto; padding: 120px 1.5rem 4rem; }
+        .article-title { font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 2rem; color: var(--deep-navy); }
+        .article-body { line-height: 2.2; font-size: 1.15rem; color: var(--charcoal); }
+        .meta-row { display: flex; justify-content: center; gap: 1.5rem; color: #666; margin-bottom: 1rem; }
+        .divider { width: 1px; height: 20px; background: #ddd; }
+        .btn-outline-gold { border: 2px solid var(--matte-gold); color: var(--matte-gold); padding: 0.6rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
+      `}</style>
     </Layout>
   );
 }

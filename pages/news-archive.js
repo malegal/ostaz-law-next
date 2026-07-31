@@ -162,7 +162,32 @@ export default function NewsArchive({ newsItems }) {
         </div>
       </section>
 
-      <style jsx>{/* تم حذف font-family المكررة، تعتمد على globals.css */}</style>
+      <style jsx>{`
+        .hero-blog { padding: 120px 2rem 4rem; background: var(--very-dark-navy); position: relative; overflow: hidden; min-height: 45vh; display: flex; align-items: center; }
+        .hero-blog .hero-pattern { position: absolute; inset: 0; opacity: 0.03; background-image: radial-gradient(circle at 20% 30%, var(--matte-gold) 1px, transparent 1px), radial-gradient(circle at 80% 70%, var(--matte-gold) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; }
+        .hero-blog .hero-glow { position: absolute; width: 60vw; height: 60vw; border-radius: 50%; background: radial-gradient(circle, rgba(176,141,87,0.04) 0%, transparent 70%); top: -20%; right: -20%; pointer-events: none; animation: orbFloat 20s ease-in-out infinite alternate; }
+        .hero-blog .hero-glow-2 { position: absolute; width: 40vw; height: 40vw; border-radius: 50%; background: radial-gradient(circle, rgba(176,141,87,0.02) 0%, transparent 70%); bottom: -20%; left: -10%; pointer-events: none; animation: orbFloat 25s ease-in-out infinite alternate-reverse; }
+        @keyframes orbFloat { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(40px, -30px) scale(1.05); } }
+        .hero-blog .hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; width: 100%; }
+        .hero-blog .hero-title-wrap { text-align: center; }
+        .hero-blog .hero-title-wrap .en-tag { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.4em; text-transform: uppercase; color: var(--matte-gold); opacity: 0.5; display: block; margin-bottom: 0.3rem; }
+        .hero-blog .hero-title-wrap h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 900; color: #fff; line-height: 1.1; }
+        .hero-blog .hero-title-wrap h1 .gold-text { color: var(--matte-gold); }
+        .hero-blog .hero-title-wrap .sub { font-size: clamp(1rem, 1.3vw, 1.2rem); font-weight: 400; color: rgba(255,255,255,0.5); max-width: 700px; margin: 0.8rem auto 0; line-height: 1.7; }
+        .blog-section { padding: 5rem 2rem; background: var(--warm-off-white); }
+        .blog-section .inner { max-width: 1200px; margin: 0 auto; }
+        .experience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+        .sector-link { display: block; text-decoration: none; color: inherit; transition: all 0.4s var(--ease-out); position: relative; cursor: pointer; }
+        .sector-link::after { content: ''; position: absolute; bottom: 0; right: 0; width: 0; height: 3px; background: var(--matte-gold); transition: width 0.6s var(--ease-out); border-radius: 0 0 10px 10px; }
+        .sector-link:hover::after { width: 100%; }
+        .sector-link:hover .experience-card { border-color: var(--matte-gold); transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
+        .experience-card { background: var(--pure-white); padding: 1.6rem 1.2rem; border-radius: 10px; border: 1px solid rgba(0,0,0,0.06); transition: all 0.4s var(--ease-out); box-shadow: 0 2px 12px rgba(0,0,0,0.03); text-align: center; cursor: pointer; height: 100%; position: relative; }
+        .experience-card .icon-svg { font-size: 1.8rem; color: var(--matte-gold); opacity: 0.8; margin-bottom: 0.6rem; display: block; }
+        .experience-card h4 { font-size: 1rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.4rem; }
+        .experience-card p { font-size: 0.9rem; color: var(--charcoal); font-weight: 700; line-height: 1.7; }
+        @media (max-width: 820px) { .hero-blog { padding: 100px 1rem 3rem; min-height: 35vh; } .blog-section { padding: 2.5rem 1rem; } .experience-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 640px) { .experience-grid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; } }
+      `}</style>
     </Layout>
   );
 }
